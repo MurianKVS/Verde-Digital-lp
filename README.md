@@ -1,5 +1,3 @@
-# Verde-Digital-lp
-
 # 🌱 Verde Digital - Landing Page
 
 ## 📋 Sobre o Projeto
