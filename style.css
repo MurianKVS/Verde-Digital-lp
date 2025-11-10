@@ -38,8 +38,10 @@ section {
   text-align: center;
 }
 
-.space {
-  height: 25px;
+hr {
+  position: relative;
+  opacity: 0;
+  top: -80px;
 }
 
 /* Botões */
@@ -75,48 +77,34 @@ section {
 
 /* ===================================================================================== */
 /* Cabeçalho / Barra de Navegação */
-.header {
-  background-color: rgb(232, 248, 239, 0.95);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
+.custom-navbar {
+  background-color: rgba(232, 248, 239, 0.95) !important;
   border-bottom: 1.5px solid rgba(3, 75, 30, 0.8);
-}
-
-.header section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.header .logo {
+.custom-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.custom-navbar .logo img {
+  max-height: 100px;
   margin-right: auto;
 }
 
-.header .logo img {
-  max-height: 100px;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.navbar a {
-  margin: 0 1rem;
+.custom-navbar .nav-link {
   font-size: 1.8rem;
-  text-align: center;
-  color: #349249;
+  color: #349249 !important;
+  margin: 0 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
-.navbar a:hover {
-  color: var(--main-green);
+.custom-navbar .nav-link:hover {
+  color: var(--main-green) !important;
   border-bottom: 0.1rem solid var(--main-green);
   padding-bottom: 0.5rem;
   font-size: 2rem;
@@ -126,6 +114,7 @@ section {
 /* ===================================================================================== */
 /* Home / Destaque */
 .home-container {
+  margin-top: -60px;
   position: relative;
   background: url(assets/home-bg.png) center/cover no-repeat;
   min-height: 100vh;
@@ -234,6 +223,7 @@ section {
 .about .intro-cards .card {
   background-color: white;
   border-radius: 1rem;
+  border: var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 3rem 2rem;
   flex: 1 1 300px;
@@ -267,6 +257,7 @@ section {
   flex-wrap: wrap;
   background-color: white;
   border-radius: 1rem;
+  border: var(--border);
   padding: 4rem 3rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -453,7 +444,7 @@ section {
 .impact-number {
   font-size: 4rem;
   font-weight: 800;
-  color: #22c55e;
+  color: #1E9F4D;
   margin: 0;
   text-align: center;
 }
@@ -546,9 +537,8 @@ section {
 }
 
 .btn-group .btn {
-  flex: 1;
-  text-align: center;
-  white-space: nowrap;
+  flex: 0 1 auto; /* não força ocupar todo o espaço */
+  min-width: 140px; /* largura mínima */
   margin: 0 10px 10px;
 }
 
@@ -899,11 +889,6 @@ section {
 @media (max-width: 480px) {
   html {
     font-size: 8px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 
   .btn {

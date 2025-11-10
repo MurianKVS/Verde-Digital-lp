@@ -7,6 +7,8 @@
     <title>Verde Digital</title>
     <link rel="icon" href="assets/logo0.png" />
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Importação de estilos -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,19 +17,43 @@
 </head>
 <body>
     <!--Cabeçalho / Menu-->
-    <header class="header">
+    <header>
         <section>
-            <a href="#" class="logo">
-                <img src="assets/logo2.png" alt="Logo Verde Digital">
-            </a>
-            <nav class="navbar" aria-label="Menu principal">
-                <a href="#">Início</a>
-                <a href="#about">Quem Somos?</a>
-                <a href="#projects">Projetos</a>
-                <a href="#impacts">Impactos</a>
-                <a href="#galery">Galeria</a>
-                <a href="#how-to-help">Como Ajudar</a>
-                <a href="#contact">Contato</a>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+                <div class="container-fluid custom-container">
+                    <a class="navbar-brand logo" href="#">
+                        <img src="assets/logo2.png" alt="Logo Verde Digital" class="custom-logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">Quem Somos?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projetos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#impacts">Impactos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#how-to-help">Como Ajudar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#galery">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </section>
     </header>
@@ -38,14 +64,15 @@
             <section class="home">
                 <div class="content">
                     <h3>Seja bem-vindo a <span id="blue">ONG</span> <span id="green">Verde Digital!</span></h3>
-                    <p>Somos uma ONG localizada na Região Metropolitana de Campinas, especializada em descartar e reciclar adequadamente o seu <span id="green">lixo eletrônico</span>! Entre em contato conosco para saber mais. </p>
+                    <p>Somos uma ONG localizada na Região Metropolitana de Campinas, especializada em descartar e reciclar adequadamente o seu <span id="green">lixo eletrônico</span>! Entre em contato conosco para saber mais.</p>
                     <a href="#how-to-help" class="btn">Quero Ajudar</a>
                     <h4>"Do descarte consciente nasce um mundo mais verde."</h4>
                 </div>
             </section>
         </div>
         <!-- Quem Somos / Sobre -->
-        <section id="about" class="about">
+        <hr id="about" style="top: -40px;">
+        <section class="about">
             <h2 class="title">Quem Somos</h2>
             <p class="intro-text">
                 Somos uma ONG especializada na reciclagem e restauração de equipamentos eletrônicos esquecidos, quebrados e obsoletos,
@@ -86,9 +113,10 @@
                     </p>
                 </div>
             </div>
+            <hr id="projects" style="top: -10px;">
         </section>
         <!-- Projetos e Ações -->
-        <section id="projects" class="projects">
+        <section class="projects">
             <h2 class="title">Nossos Projetos</h2>
             <p class="subtitle">A Verde Digital conta com alguns programas e projetos para engajar o público! Confira:</p>
             <div class="project-cards">
@@ -116,9 +144,10 @@
                     <a href="projects/oficinas.html" class="btn">Faça sua inscrição!</a>
                 </div>
             </div>
+            <hr id="impacts" style="top: -65px;">
         </section>
         <!-- Impactos  -->
-        <section id="impacts" class="impacts">
+        <section class="impacts">
             <h2 class="title">Impactos Ambientais</h2>
             <p class="subtitle">Números que demonstram nosso impacto!</p>
             <div class="impact-container">
@@ -147,9 +176,10 @@
                     <canvas id="chartCampanhas"></canvas>
                 </div>
             </div>
+            <hr id="how-to-help">
         </section>
         <!-- Como Ajudar  -->
-        <section id="how-to-help" class="how-to-help">
+        <section class="how-to-help">
             <h2 class="title">Como Ajudar</h2>
             <p class="subtitle">Existem varias formas de contribuir com a nossa causa:</p>
             <div class="help-container">
@@ -157,51 +187,62 @@
                     <h3>Doações</h3>
                     <p>Contribua com aparelhos eletrônicos ou financeiramente para apoiar nossos projetos.</p>
                     <div class="btn-group">
-                        <a href="projects/equipamentos.html" class="btn">Doar Equipamentos</a>
-                        <a href="helps/doacao.html" class="btn">Contribuir Financeiramente</a>
+                        <a href="projects/equipamentos.html" class="btn" style="border-radius: 0.8rem;">Doar Equipamentos</a>
+                        <a href="helps/doacao.html" class="btn" style="border-radius: 0.8rem;">Contribuir Financeiramente</a>
                     </div>
                 </div>
                 <div class="help-card">
                     <h3>Voluntariado</h3>
                     <p>Ajude em campanhas, palestras e oficinas, doando seu tempo e conhecimento.</p>
                     <div class="btn-group">
-                        <a href="helps/voluntariado.html" class="btn">Quero Ser Voluntário</a>
+                        <a href="helps/voluntariado.html" class="btn" style="border-radius: 0.8rem;">Quero Ser Voluntário</a>
                     </div>
                 </div>
                 <div class="help-card">
                     <h3>Parceria</h3>
                     <p>Empresas e instituições podem apoiar nossas campanhas e projetos sustentáveis.</p>
                     <div class="btn-group">
-                        <a href="/helps/parceiros.html" class="btn">Seja Parceiro</a>
+                        <a href="helps/parceiros.html" class="btn" style="border-radius: 0.8rem;">Seja Parceiro</a>
                     </div>
                 </div>
             </div>
+            <hr id="galery">
         </section>
-        <section id="galery" class="galery">
+        <section class="galery">
             <h2 class="title">Galeria</h2>
             <p class="subtitle">Veja alguns momentos das nossas ações e campanhas!</p>
             <div class="carousel-container">
                 <div class="slide active">
-                   <img src="assets/img1.jpg" alt="imagem-galeria-ong"> 
+                   <img src="assets/galery/img1.jpg" alt="imagem-galeria-ong"> 
                 </div>
                 <div class="slide">
-                    <img src="assets/img2.jpg" alt="imagem-galeria-ong">
+                    <img src="assets/galery/img2.jpg" alt="imagem-galeria-ong">
                 </div>
                 <div class="slide">
-                    <img src="/assets/img3.png" alt="imagem-galeria-ong">
+                    <img src="assets/galery/img5.png" alt="imagem-galeria-ong">
                 </div>
                 <div class="slide">
-                    <img src="/assets/img4.png" alt="imagem-galeria-ong">
+                    <img src="assets/galery/img6.png" alt="imagem-galeria-ong">
+                </div>
+                <div class="slide">
+                    <img src="assets/galery/img7.png" alt="imagem-galeria-ong">
+                </div>
+                <div class="slide">
+                    <img src="assets/galery/img3.png" alt="imagem-galeria-ong">
+                </div>
+                <div class="slide">
+                    <img src="assets/galery/img4.png" alt="imagem-galeria-ong">
                 </div>
                 <button class="prev">&#10094;</button>
                 <button class="next">&#10095;</button>           
             </div>
+            <hr id="contact">
         </section>
-        <section id="contact" class="contact">
+        <section class="contact">
             <h2 class="title">Entre em Contato</h2>
             <p class="subtitle">Tem dúvidas ou sugestões? Envie uma mensagem!</p>
             <div class="container-form">
-                <form action="#" class="contact-form">
+                <form  id="contact-form" class="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Seu nome" required>
                     </div>
@@ -213,20 +254,23 @@
                     </div>
                     <button class="btn" type="submit">Enviar</button>
                 </form>
+                <div id="alerta-contato" class="alert alert-success alert-dismissible fade d-none mt-3" role="alert">
+                    Mensagem enviada com sucesso.
+                </div>
                 <div class="social-links">
-                    <a href="http://" target="_blank">
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
                         <img class="icon" width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-circled.png" alt="facebook-circled"/>
                     </a>
                     <a href="https://www.instagram.com/verdedigital_ong" target="_blank">
                         <img class="icon" width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-logo"/>
                     </a>
-                    <a href="http://" target="_blank">
+                    <a href="https://w.app/verdedigital" target="_blank">
                         <img class="icon" width="48" height="48" src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp"/>
                     </a>
-                    <a href="http://" target="_blank">
+                    <a href="https://br.linkedin.com/" target="_blank">
                         <img class="icon" width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>
                     </a>
-                    <a href="mailto:email@provedor.com.br" target="_blank">
+                    <a href="mailto:ongverdedigital@gmail.com" target="_blank">
                         <img class="icon" width="48" height="48" src="https://img.icons8.com/fluency/48/gmail.png" alt="gmail"/>
                     </a>
                 </div>
@@ -257,14 +301,14 @@
             <div class="footer-contact">
                 <h4>Contato</h4>
                 <div class="social-icons">
-                    <a href="#" aria-label="FAcebook"><img class="icon" src="https://img.icons8.com/fluency/48/facebook-circled.png" alt="facebook-circled"/>Facebook</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" aria-label="Facebook"><img class="icon" src="https://img.icons8.com/fluency/48/facebook-circled.png" alt="facebook-circled"/>Facebook</a>
                     <a href="https://www.instagram.com/verdedigital_ong" aria-label="Instagram"><img class="icon" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-logo"/>Instagram</a>
-                    <a href="#" aria-label="whatsapp"><img class="icon" src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp"/>WhatsApp</a>
-                    <a href="#" aria-label="LinkedIn"><img class="icon" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>Linkedin</a>
+                    <a href="https://w.app/verdedigital" aria-label="whatsapp"><img class="icon" src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp"/>WhatsApp</a>
+                    <a href="https://br.linkedin.com/" aria-label="LinkedIn"><img class="icon" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>Linkedin</a>
                     <address>
-                        <a href="mailto:contato@verdedigital.org">
+                        <a href="mailto:ongverdedigital@gmail.com">
                         <img class="icon" src="https://img.icons8.com/fluency/24/gmail.png" alt="Email"/>
-                        contato@verdedigital.org
+                        ongverdedigital@gmail.com
                         </a>
                     </address>
                 </div>
@@ -274,6 +318,10 @@
             <p>&copy; 2025 ONG Verde Digital — Todos os direitos reservados.</p>
         </div>
     </footer>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Importação do chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts.js"></script>

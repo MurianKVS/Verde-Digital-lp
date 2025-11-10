@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doações</title>
-    <link rel="icon" href="/assets/logo0.png" />
+    <link rel="icon" href="../assets/logo0.png" />
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Importação de estilos -->
      <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="helps.css">
@@ -14,23 +16,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header>
         <section>
-            <a href="../index.html" class="logo">
-                <img src="/assets/logo2.png" alt="Logo Verde Digital">
-            </a>
-            <nav class="navbar">
-                <a href="../index.html">Início</a>
-                <a href="../index.html#about">Quem Somos?</a>
-                <a href="../index.html#projects">Projetos</a>
-                <a href="../index.html#impacts">Impactos</a>
-                <a href="../index.html#galery">Galeria</a>
-                <a href="../index.html#how-to-help">Como Ajudar</a>
-                <a href="../index.html#contact">Contato</a>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+                <div class="container-fluid custom-container">
+                    <a class="navbar-brand logo" href="../index.html#">
+                        <img src="../assets/logo2.png" alt="Logo Verde Digital" class="custom-logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#about">Quem Somos?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#projects">Projetos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#impacts">Impactos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#galery">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#how-to-help">Como Ajudar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#contact">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </section>
     </header>
     <main class="help-page">
+        <div id="alerta-chavePix" class="alert alert-success alert-dismissible fade d-none mt-3 custom" role="alert">
+            Chave Pix copiada com sucesso!
+        </div>
         <section class="help-section">
             <h3 class="title">Doações</h3>
             <p class="subtitle">
@@ -42,7 +71,7 @@
 
                 <div class="pix-code">
                     <input type="text" value="000111222333444555666777888999000111222333444555xyzAbCdEfGhIjKlMn" id="pixKey" readonly>
-                    <button onclick="copyPix()">Copiar</button>
+                    <button id="pix-btn">Copiar</button>
                 </div>
                 <div class="bank-info">
                     <p><strong>Agência:</strong> 1230-258425</p>
@@ -60,7 +89,7 @@
         <div class="footer-container">
             <div class="footer-about">
                 <div class="ong-title">
-                    <img src="/assets/logo0.png" alt="Logo Verde Digital" class="footer-logo">
+                    <img src="../assets/logo0.png" alt="Logo Verde Digital" class="footer-logo">
                     <h4>ONG Verde Digital</h4>
                 </div>
                 <p class="slogan">"Transformando lixo eletrônico em vida."</p>
@@ -70,7 +99,7 @@
                 <h4>Links úteis</h4>
                 <ul>
                     <li><a href="../index.html">Início</a></li>
-                    <li><a href="/index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
                     <li><a href="../index.html#projects">Projetos</a></li>
                     <li><a href="../index.html#impacts">Impactos</a></li>
                     <li><a href="../index.html#how-to-help">Como Ajudar</a></li>
@@ -80,14 +109,14 @@
             <div class="footer-contact">
                 <h4>Contato</h4>
                 <div class="social-icons">
-                    <a href="#" aria-label="FAcebook"><img class="icon" src="https://img.icons8.com/fluency/48/facebook-circled.png" alt="facebook-circled"/>Facebook</a>
+                    <a href="https://www.facebook.com/?locale=pt_BR" aria-label="Facebook"><img class="icon" src="https://img.icons8.com/fluency/48/facebook-circled.png" alt="facebook-circled"/>Facebook</a>
                     <a href="https://www.instagram.com/verdedigital_ong" aria-label="Instagram"><img class="icon" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-logo"/>Instagram</a>
-                    <a href="#" aria-label="whatsapp"><img class="icon" src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp"/>WhatsApp</a>
-                    <a href="#" aria-label="LinkedIn"><img class="icon" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>Linkedin</a>
+                    <a href="https://w.app/verdedigital" aria-label="whatsapp"><img class="icon" src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp"/>WhatsApp</a>
+                    <a href="https://br.linkedin.com/" aria-label="LinkedIn"><img class="icon" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>Linkedin</a>
                     <address>
-                        <a href="mailto:contato@verdedigital.org">
+                        <a href="mailto:ongverdedigital@gmail.com">
                         <img class="icon" src="https://img.icons8.com/fluency/24/gmail.png" alt="Email"/>
-                        contato@verdedigital.org
+                        ongverdedigital@gmail.com
                         </a>
                     </address>
                 </div>
@@ -97,6 +126,11 @@
             <p>&copy; 2025 ONG Verde Digital — Todos os direitos reservados.</p>
         </div>
     </footer>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="../scripts.js"></script>
+    <script src="../alerts.js"></script>
 </body>
 </html>

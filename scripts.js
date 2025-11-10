@@ -1,4 +1,3 @@
-
 const defaultOptions = {
         responsive: true,
         maintainAspectRatio: false,
@@ -127,6 +126,7 @@ new Chart(document.getElementById("chartCampanhas"), {
     }
 });
 
+
 const slides = document.querySelectorAll(".slide");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
@@ -138,21 +138,12 @@ function ShowSlide(index){
     slides[index].classList.add("active");
 }
 
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     ShowSlide(currentIndex);
 });
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % slides.length;
   ShowSlide(currentIndex);
 });
-
-
-function copyPix() {
-      const pix = document.getElementById("pixKey");
-      pix.select();
-      pix.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      alert("Chave Pix copiada com sucesso!");
-}

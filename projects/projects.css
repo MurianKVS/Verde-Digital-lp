@@ -1,9 +1,10 @@
+main {
+  margin-top: 70px;
+}
+
 /* Pagina da programação das campanhas de doação de equipamentos */
 /* e */
 /* Pagina da programação das oficinas */
-.header {
-    position: sticky;
-}
 .donation-schedule {
   min-height: 100vh;
   padding: 5rem 2rem 6rem;
